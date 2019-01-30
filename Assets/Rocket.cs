@@ -16,7 +16,7 @@ public class Rocket : MonoBehaviour
     enum State { Alive, Dying, Transcending }
     State state = State.Alive;
 
-    void Start()
+	void Start ()
     {
         rigidBody = GetComponent<Rigidbody>();
         audioSource = GetComponent<AudioSource>();
@@ -105,7 +105,7 @@ public class Rocket : MonoBehaviour
         else if (Input.GetKey(KeyCode.D))
         {
             float rotationSpeed = rcsThrust * Time.deltaTime;
-            transform.Rotate(-Vector3.forward * rotationSpeed);
+            transform.Rotate(-Vector3.forward* rotationSpeed);
         }
 
         rigidBody.freezeRotation = false;
